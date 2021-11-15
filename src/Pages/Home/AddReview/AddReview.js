@@ -10,7 +10,7 @@ const AddReview = () => {
     const onSubmit = data => {
         console.log(data);
         axios
-            .post('http://localhost:5000/rating', data)
+            .post('https://infinite-tor-54657.herokuapp.com/rating', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Rating successfully');

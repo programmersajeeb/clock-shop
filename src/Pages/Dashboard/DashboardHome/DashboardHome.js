@@ -19,7 +19,7 @@ const DashboardHome = () => {
     const [orderProducts, setOrderProducts] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/orderProducts?email=${user.email}`;
+        const url = `https://infinite-tor-54657.herokuapp.com/orderProducts?email=${user.email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setOrderProducts(data));
@@ -63,8 +63,7 @@ const DashboardHome = () => {
                                             <TableCell>Name</TableCell>
                                             <TableCell align="left">Product Name</TableCell>
                                             <TableCell align="left">Price</TableCell>
-                                            <TableCell align="right">Update</TableCell>
-                                            <TableCell align="right">Delete</TableCell>
+                                            <TableCell align="right">Cancel</TableCell>
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
@@ -82,8 +81,7 @@ const DashboardHome = () => {
                                                     </TableCell>
                                                     <TableCell align="left">{row.productName}</TableCell>
                                                     <TableCell align="left">${row.price}</TableCell>
-                                                    <TableCell align="right">{row.carbs}</TableCell>
-                                                    <TableCell align="right"><Button onClick={() => handleDelete(orderProducts._id)} size="small">Delete</Button></TableCell>
+                                                    <TableCell align="right"><Button onClick={() => handleDelete(orderProducts._id)} size="small">Cancel</Button></TableCell>
                                                 </TableRow>
                                             ))
                                         }

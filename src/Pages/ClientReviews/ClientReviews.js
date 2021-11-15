@@ -8,7 +8,7 @@ import ClientReview from '../ClientReview/ClientReview';
 const ClientReviews = () => {
     const [clientReviews, setClientReviews] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/rating')
+        fetch('https://infinite-tor-54657.herokuapp.com/rating')
             .then(res => res.json())
             .then(data => setClientReviews(data))
     }, []);

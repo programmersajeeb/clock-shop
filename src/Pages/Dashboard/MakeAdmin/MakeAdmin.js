@@ -10,7 +10,7 @@ const MakeAdmin = () => {
   }
   const handelAdminSubmit = e =>{
   const user = {email};
-    fetch('http://localhost:5000/users/admin', {
+    fetch('https://infinite-tor-54657.herokuapp.com/users/admin', {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'

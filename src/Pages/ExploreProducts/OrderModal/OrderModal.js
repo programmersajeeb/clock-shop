@@ -42,7 +42,7 @@ const OrderModal = ({openOrder, handleOrderClose, product}) => {
       productName: name
     }
     // Send To The Server
-    fetch('http://localhost:5000/orderProducts', {
+    fetch('https://infinite-tor-54657.herokuapp.com/orderProducts', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

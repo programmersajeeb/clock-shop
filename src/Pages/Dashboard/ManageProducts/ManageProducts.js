@@ -16,13 +16,13 @@ const ManageProducts = () => {
     const [products, setProducts] = useState([]);
     console.log(products);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://infinite-tor-54657.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/products/${id}`;
+        const url = `https://infinite-tor-54657.herokuapp.com/products/${id}`;
         fetch(url, {method: 'DELETE'})
             .then(res => res.json())
             .then(data => {

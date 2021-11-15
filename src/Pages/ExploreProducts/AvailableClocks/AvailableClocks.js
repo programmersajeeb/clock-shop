@@ -8,7 +8,7 @@ import {Container} from '@mui/material';
 const AvailableClocks = () => {
     const [availableClocks, setAvailableClocks] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://infinite-tor-54657.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setAvailableClocks(data))
     }, []);

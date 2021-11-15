@@ -10,7 +10,7 @@ const ProductDetails = () => {
     const [product, setProduct] = useState({});
     const {img, name, discription, price} = product;
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${ProductId}`)
+        fetch(`https://infinite-tor-54657.herokuapp.com/products/${ProductId}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, []);

@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Live Link: https://clock-shop-1055f.web.app/
+
+=> This is a watch selling website. From now on, anyone can buy the watch of his choice.
+
+=> It is easy to see the quantity that a person will order on this website and if necessary, he can cancel it.
+
+=> An admin of this website can easily make anyone an admin and he can easily enjoy all the features of this admin.
+
+=> An admin can easily add and delete products.
+
+=> Here anyone can express their personal opinion on a product.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
