@@ -12,6 +12,7 @@ import AuthProvaider from './contexts/AuthProvider/AuthProvaider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
+import ClientReviews from './Pages/ClientReviews/ClientReviews';
 // import UpdateProduct from './Pages/Dashboard/UpdateProduct/UpdateProduct';
 
 function App() {
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/productDetails/:ProductId">
             <ProductDetails />
+          </Route>
+          <Route path="/clientReview">
+            <ClientReviews></ClientReviews>
           </Route>
           <Route exact path="/">
             <Home />

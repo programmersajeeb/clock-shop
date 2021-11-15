@@ -1,4 +1,5 @@
 import {
+    Button,
     Container,
     Grid,
     Paper,
@@ -23,6 +24,22 @@ const DashboardHome = () => {
             .then(res => res.json())
             .then(data => setOrderProducts(data));
     }, [])
+
+    const handleDelete = id => {
+        const url = `http://localhost:5000/orderProducts/${id}`;
+        fetch(url, {method: 'DELETE'})
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.deletedCount) {
+                    alert('Deleted')
+                    const remaining = orderProducts.filter(orderProduct => orderProduct._id !== id);
+                    setOrderProducts(remaining);
+                };
+
+            });
+    };
+
     return (
         <Box>
             <Container>
@@ -66,7 +83,7 @@ const DashboardHome = () => {
                                                     <TableCell align="left">{row.productName}</TableCell>
                                                     <TableCell align="left">${row.price}</TableCell>
                                                     <TableCell align="right">{row.carbs}</TableCell>
-                                                    <TableCell align="right">{row.protein}</TableCell>
+                                                    <TableCell align="right"><Button onClick={() => handleDelete(orderProducts._id)} size="small">Delete</Button></TableCell>
                                                 </TableRow>
                                             ))
                                         }

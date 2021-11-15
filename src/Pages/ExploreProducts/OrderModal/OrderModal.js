@@ -14,7 +14,7 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: '#9f7a49',
+  bgcolor: '#ece4d9',
   border: '2px solid rgba(193,164,130,.3)',
   boxShadow: 24,
   p: 4,
@@ -81,6 +81,7 @@ const OrderModal = ({openOrder, handleOrderClose, product}) => {
             sx={{width: '90%', m: 1}}
           id="outlined-size-small"
           name= "buyerName"
+          type="text"
           onBlur={handleOnBlur}
           placeholder="Your Name"
           defaultValue={user.displayName}
@@ -92,6 +93,7 @@ const OrderModal = ({openOrder, handleOrderClose, product}) => {
           name= "email"
           onBlur={handleOnBlur}
           placeholder="Your Email"
+          type="email"
           defaultValue={user.email}
           size="small"
         />
@@ -101,6 +103,7 @@ const OrderModal = ({openOrder, handleOrderClose, product}) => {
           name= "phone"
           onBlur={handleOnBlur}
           placeholder="Phone Number"
+          type="number"
           size="small"
         />
             <TextField
@@ -108,6 +111,7 @@ const OrderModal = ({openOrder, handleOrderClose, product}) => {
             sx={{width: '90%', m: 1}}
           id="outlined-size-small"
           placeholder="Product Price"
+          type="number"
           defaultValue={price}
           size="small"
         />

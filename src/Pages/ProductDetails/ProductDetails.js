@@ -29,7 +29,7 @@ const ProductDetails = () => {
                         width: 3 / 4,
                         mt:8
                     }}>
-                    <Grid container="container" spacing={4}>
+                    <Grid container="container" spacing={0}>
                         <Grid item="item" xs={12} md={6} xl={6} height="580px" backgroundColor="rgba(193,164,130,.3)">
                             <img
                                 style={{
@@ -41,7 +41,7 @@ const ProductDetails = () => {
                                 alt=""/>
                         </Grid>
                         <Grid item="item" xs={12} md={6} xl={6}>
-                            <Box textAlign="left">
+                            <Box textAlign="left" padding="0 16px">
                                 <Typography
                                     variant="h4"
                                     fontWeight="700"

@@ -11,7 +11,7 @@ const Banner = () => {
           <Box style={{marginTop:"27vh", paddingRight:"5%"}} sx={{ textAlign: 'right' }}>
           <Typography style={{color:'#f3e0ca', textTransform:"uppercase", fontSize:"30px"}} variant="body1" gutterBottom> FALL IN LOVE </Typography>
           <Typography style={{color:'#9f7a49', textTransform:"uppercase"}} variant="h3" gutterBottom component="div"> Redefining the meaning of time </Typography>
-          <Link to="/exploreProducts">
+          <Link style={{textDecoration:"none"}} to="/exploreProducts">
           <Button style={{color:'#9f7a49', textTransform:"uppercase", fontSize:"20px"}} variant="outlined">EXPLORE</Button>
           </Link>
           </Box>

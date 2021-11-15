@@ -55,35 +55,32 @@ const ManageProducts = () => {
                             product => <Grid key={product._id} item="item" xs={4} sm={4} md={4}>
                                 <Card
                                     sx={{
-                                        maxwidth: 345
+                                        maxwidth: 345,
+                                        backgroundColor: "rgba(193,164,130,.3)"
                                     }}>
                                     <CardMedia
                                         component="img"
                                         style={{
                                             width: '100%',
                                             height: '250px',
-                                            objectFit: 'contain'
+                                            objectFit: 'contain',
+                                            marginTop: '15px'
                                         }}
                                         image={product.img}
                                         alt="green iguana"/>
                                     <CardContent>
-                                        <Typography
-                                            sx={{
-                                                fontSize: 14
-                                            }}
-                                            color="text.secondary"
-                                            gutterBottom="gutterBottom">
-                                            Word of the Day
-                                        </Typography>
-                                        <Typography variant="h5" component="div">
+                                        <Typography variant="h5" component="div" color="#000000">
                                             {product.name}
                                         </Typography>
-                                        <Typography variant="body2">
-                                            {product.discription}
+                                        <Typography variant="h6" component="div" color="#808080">Price: ${product.price}
                                         </Typography>
                                     </CardContent>
-                                    <CardActions>
-                                        <Button onClick={() => handleDelete(product._id)} size="small">Delete</Button>
+                                    <CardActions
+                                        style={{
+                                            display: "block",
+                                            alignItem: "center"
+                                        }}>
+                                        <Button onClick={() => handleDelete(product._id)} size="large">Delete</Button>
                                     </CardActions>
                                 </Card>
                             </Grid>

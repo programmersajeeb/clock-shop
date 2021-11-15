@@ -30,7 +30,7 @@ import ManageProducts from '../ManageProducts/ManageProducts';
 import useAuth from '../../../hooks/useAuth';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 function Dashboard(props) {
     const {window} = props;
@@ -42,55 +42,44 @@ function Dashboard(props) {
     };
 
     const drawer = (
-        <div>
+        <div style={{backgroundColor:"rgba(193,164,130,.3)", minHeight:"100vh"}}>
             <Toolbar/>
             <Divider/>
+            <Box style={{paddingLeft:"10px"}}>
             <Box>
-            <Link to="/">
+            <Box style={{textAlign:"left"}}>
+            <Link style={{textDecoration:"none", color:"#757575"}} to="/">
                 <Button color="inherit">Clock Shop</Button>
             </Link>
             </Box>
-            <Box>
-            <Link to={`${url}`}>
+            <Box style={{textAlign:"left"}}>
+            <Link style={{textDecoration:"none", color:"#757575"}} to={`${url}`}>
                 <Button color="inherit">Dashboard</Button>
             </Link>
             </Box>
+            </Box>
             {
-                admin && <Box>
+                admin && <Box style={{textAlign:"left"}}>
                         <Box>
-                        <Link to={`${url}/makeAdmin`}>
+                        <Link style={{textDecoration:"none", color:"#757575"}} to={`${url}/makeAdmin`}>
                             <Button color="inherit">Make Admin</Button>
                         </Link>
                         </Box>
                         <Box>
-                        <Link to={`${url}/addProduct`}>
+                        <Link style={{textDecoration:"none", color:"#757575"}} to={`${url}/addProduct`}>
                             <Button color="inherit">Add Product</Button>
                         </Link>
                         </Box>
                         <Box>
-                        <Link to={`${url}/manageProducts`}>
+                        <Link style={{textDecoration:"none", color:"#757575"}} to={`${url}/manageProducts`}>
                             <Button color="inherit">Manage Products</Button>
                         </Link>
                         </Box>
                         
                     </Box>
             }
-            <List>
-                {
-                    ['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem button="button" key={text}>
-                            <ListItemIcon>
-                                {
-                                    index % 2 === 0
-                                        ? <InboxIcon/>
-                                        : <MailIcon/>
-                                }
-                            </ListItemIcon>
-                            <ListItemText primary={text}/>
-                        </ListItem>
-                    ))
-                }
-            </List>
+            </Box>
+            
         </div>
     );
 
@@ -107,7 +96,8 @@ function Dashboard(props) {
                 position="fixed"
                 sx={{
                     width: {
-                        sm: `calc(100% - ${drawerWidth}px)`
+                        sm: `calc(100% - ${drawerWidth}px)`,
+                        backgroundColor:"rgba(193,164,130,.3)"
                     },
                     ml: {
                         sm: `${drawerWidth}px`
@@ -127,7 +117,7 @@ function Dashboard(props) {
                         }}>
                         <MenuIcon/>
                     </IconButton>
-                    <Typography variant="h6" noWrap="noWrap" component="div">
+                    <Typography variant="h6" noWrap="noWrap" color="#757575" component="div">
                         Dashboard
                     </Typography>
                 </Toolbar>
