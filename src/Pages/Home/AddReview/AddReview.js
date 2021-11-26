@@ -25,7 +25,7 @@ const AddReview = () => {
             <div>
                 <h2 style={{fontSize:"35px"}}>Reviews as Client</h2>
                 <iframe width="100%" height="300px"
-                    src="http://localhost:3000/clientReview"
+                    src="https://clock-shop-1055f.web.app/clientReview"
                     title="Our Client Review"></iframe>
             </div>
             <div className="reviewForm" style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>

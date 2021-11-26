@@ -26,7 +26,7 @@ const DashboardHome = () => {
     }, [])
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/orderProducts/${id}`;
+        const url = `https://infinite-tor-54657.herokuapp.com/orderProducts/${id}`;
         fetch(url, {method: 'DELETE'})
             .then(res => res.json())
             .then(data => {
